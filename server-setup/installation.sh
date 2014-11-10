@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "!==============! Installing dev tools !===============!"
+
+yum groupinstall -y "Development Tools"
+
 # Nginx
 echo "!==============! Installing nginx !===============!"
 cat files/nginx.repo > /etc/yum.repos.d/nginx.repo
@@ -26,7 +30,7 @@ rm -rf  Python-3.4.1  Python-3.4.1.tgz
 curl -s https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python2.7 -
 pip install virtualenv
 
-# uWSGI 
+# uWSGI
 echo "!==============! Installing uWSGI !===============!"
 pip3.4 -q install uwsgi
 
@@ -35,7 +39,7 @@ pip -q install uwsgi
 mkdir -p /etc/uwsgi/vassals
 
 
-systemctl enable nginx uwsgi 
+systemctl enable nginx uwsgi
 
 # Postgresql
 echo "!==============! Installing uWSGI !===============!"
