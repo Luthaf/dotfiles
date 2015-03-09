@@ -42,7 +42,7 @@ mkdir -p /etc/uwsgi/vassals
 systemctl enable nginx uwsgi
 
 # Postgresql
-echo "!==============! Installing uWSGI !===============!"
+echo "!==============! Installing PostgreSQL !===============!"
 yum install -q -y postgresql postgresql-devel postgresql-server python-psycopg2
 pip3.4 -q install psycopg2
 

@@ -1,8 +1,12 @@
+inoremap jk <ESC>
+let mapleader = ","
+
+execute pathogen#infect()
+
 filetype plugin indent on
 syntax on
 set background=dark
-set number
-
+set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 
