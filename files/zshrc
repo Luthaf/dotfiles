@@ -37,9 +37,10 @@ bindkey ';5C' forward-word
 
 # Interactive only setup
 if [[ $- == *i* ]] then
-	# Needed by the fancy .vimrc
-	stty -ixon
-fi
+    # Needed by the fancy .vimrc
+    stty -ixon
 
-fortune -s | cowthink
+    clear
+    fortune -s | cowthink
+fi
 
