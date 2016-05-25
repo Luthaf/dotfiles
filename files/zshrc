@@ -1,4 +1,4 @@
-source $HOME/.zshlocal 
+source $HOME/.profile 
 
 # History
 setopt append_history
@@ -12,6 +12,7 @@ fpath+=$(brew --prefix)/share/zsh/site-functions
 
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+zstyle ':completion:*' rehash true
 autoload -Uz compinit && compinit -i
 autoload -U bashcompinit && bashcompinit
 
