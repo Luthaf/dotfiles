@@ -39,9 +39,10 @@ bindkey ';5C' forward-word
 # Interactive only setup
 if [[ $- == *i* ]] then
     # Needed by the fancy .vimrc
-    stty -ixon
-
-    clear
+    # stty -ixon sane
+    
+    unset LS_COLORS
+    export RUST_NEW_ERROR_FORMAT=1
     fortune -s | cowthink
 fi
 
