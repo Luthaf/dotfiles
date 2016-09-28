@@ -22,10 +22,10 @@ color change rgb 10 0.1 0.7 0.8 ;# cyan
 color change rgb 11 0.6 0.1 0.6 ;# purple
 
 after idle {
-  foreach mid [molinfo list] {
-    mol delrep 0 $mid
+  foreach molecule [molinfo list] {
+    mol delrep 0 $molecule
     mol representation CPK
-    mol addrep $mid
+    mol addrep $molecule
   }
 }
 
