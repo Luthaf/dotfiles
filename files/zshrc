@@ -20,7 +20,7 @@ autoload -U bashcompinit && bashcompinit
 
 export PS1="%{%F{blue}%}%n%{%F{cyan}%}@%{%F{green}%}%m%{%F{cyan}%}:%{%F{red}%}%~%{%F{cyan}%} $ %{%f%}"
 
-alias ls='ls --color=auto -pF'
+alias ls='ls -pF'
 alias ll='ls -alFh'
 alias bc='bc -ql'
 
