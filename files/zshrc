@@ -22,12 +22,14 @@ export PS1="%{%F{blue}%}%n%{%F{cyan}%}@%{%F{green}%}%m%{%F{cyan}%}:%{%F{red}%}%~
 
 alias ls='ls -pF'
 alias ll='ls -alFh'
+alias ls='ls --color=auto'
 alias bc='bc -ql'
 
 alias rm='rm -i'
 alias m='make'
 alias cm='cmake'
 alias ccm='ccmake'
+alias ctest='ctest --output-on-failure'
 
 export EDITOR=vim
 export CLICOLOR=1
