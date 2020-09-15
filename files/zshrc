@@ -9,8 +9,10 @@ SAVEHIST=1000
 HISTSIZE=1000
 HISTFILE=~/.history
 
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
+if [[ -x "$(command -v brew)" ]]; then
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+    fpath=($(brew --prefix)/share/zsh-completions $fpath)
+fi
 
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
